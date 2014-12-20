@@ -1,0 +1,47 @@
+Generate a table of ZIP codes that are within a specified distance of another ZIP code!
+===
+Coursera / Johns Hopkins University
+
+Developing Data Products
+
+December, 2014
+
+
+Why ZIPs?
+========================================================
+ZIP codes are used for more than routing mail deliveries.
+Important business functions include:
+
+- Statistical Overlays
+- Targeted Marketing
+- Demographic Overlays
+- Census Data
+
+With the ZIPTABLE app, you can easily generate a table of
+ZIP codes that are within a specified distance of another
+ZIP code!
+
+A simple data frame, and a simple algorithm!
+========================================================
+We use the R "zipcode" data:
+```{r,echo=FALSE}
+library(zipcode)
+data(zipcode)
+str(zipcode)
+head(zipcode,3)
+```
+
+A little Mathematical Magic!
+========================================================
+
+And we apply this alogrithm:
+
+$sqrt((69.1*(lat1-lat))^2+(69.1*(long1-long)*cos(lat/57.3))^2)$
+
+Thank YOU, Pythagoras!
+
+And this is the result!
+========================================================
+![alt-text](./instructions_files/figure-html/ui2.png)
+
+See it here: https://tgddatascience.shinyapps.io/ZIPTABLE/
